@@ -63,8 +63,28 @@ const buildChartData = (data, casesType) => {
   return chartData;
 };
 
+const assignColorData = (casesType) => {
+  if (casesType === "cases") {
+    return {
+      backgroundColor: "rgba(204, 16, 52, 0.5)",
+      borderColor: "#CC1034",
+    };
+  } else if (casesType === "recovered") {
+    return {
+      backgroundColor: "rgba(125,215,29,0.5)",
+      borderColor: "#7DD71D",
+    };
+  } else if (casesType === "deaths") {
+    return {
+      backgroundColor: "rgba(251,68,67,0.5)",
+      borderColor: "#C0C0C0",
+    };
+  }
+};
+
 function LineGraph({ casesType, ...props }) {
   const [data, setData] = useState({});
+  const [graphColors, setGraphColors] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -76,7 +96,8 @@ function LineGraph({ casesType, ...props }) {
           let chartData = buildChartData(data, casesType);
           setData(chartData);
           console.log(chartData);
-          // buildChart(chartData);
+          let graphColors = assignColorData(casesType);
+          setGraphColors(graphColors);
         });
     };
 
@@ -90,8 +111,8 @@ function LineGraph({ casesType, ...props }) {
           data={{
             datasets: [
               {
-                backgroundColor: "rgba(204, 16, 52, 0.5)",
-                borderColor: "#CC1034",
+                backgroundColor: graphColors.backgroundColor,
+                borderColor: graphColors.borderColor,
                 data: data,
               },
             ],

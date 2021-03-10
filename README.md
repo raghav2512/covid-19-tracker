@@ -1,6 +1,6 @@
 # Demo App
 
-[]
+[https://covid-19-tracker-ac218.web.app/]
 Click the link to checkout the demo version of the running app hosted on Firebase cloud servers
 
 ## Project stack
@@ -38,13 +38,30 @@ Configure firestore, functions and hosting.
 
 This will deploy your front end. Use the url which you will see in the firebase console.
 
-### Dependencies needed
+## Dependencies needed
 
-Line Chart->
+### Line Chart->
+
 (npm install --save react-chartjs-2 chart.js)
-// @material-us/core
-// react-leaflet (The Map)
-// leaflet (Also the Map)
-// react-chartjs-2 chart.js (graph chart chartjs)
-// numeral (for formating numbers.. (currency, percentages, decimal places))
+
+### @material-us/core
+
+### react-leaflet (The Map)
+
+### leaflet (Also the Map)
+
+### react-chartjs-2 chart.js (graph chart chartjs)
+
+### numeral (for formating numbers.. (currency, percentages, decimal places))
+
 (npm i numeral)
+
+## USe
+
+-The dropdown can be used to view Coid 19 daily and total cases, recovered and deaths for each country.
+
+-The same can be viewed automatically on selction on the map.
+
+-Also, total cases are listed countrywise on the right hand side in the decreasing order of cases.
+
+-Each cases, recovered and death individual tiles can be clicked to view the worldwide line graph trend over the past few days.
