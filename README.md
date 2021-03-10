@@ -58,7 +58,7 @@ This will deploy your front end. Use the url which you will see in the firebase 
 
 ## USe
 
--The dropdown can be used to view Coid 19 daily and total cases, recovered and deaths for each country.
+-The dropdown can be used to view Covid 19 daily and total cases, recovered and deaths for each country.
 
 -The same can be viewed automatically on selction on the map.
 
