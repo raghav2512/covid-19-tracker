@@ -5,7 +5,7 @@ Click the link to checkout the demo version of the running app hosted on Firebas
 
 ## Project stack
 
-This amazon clone has been created in js through and through. At the front end React has been used. Deployment has been done using firebase.
+This covid-19-tracker has been created using React. Deployment has been done using firebase.
 
 ## [Frontend]
 
